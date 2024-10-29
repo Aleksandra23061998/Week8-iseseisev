@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #86d39d;
+}
+
+.container{
+    color: rgb(60, 147, 158);
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.8fr 0.8fr;
+    grid-template-rows: 0.5fr 2fr 0.2fr 0.4fr 0.6fr;
+    grid-template-areas:
+    "header menu menu menu"
+    "hero hero hero hero"
+    "main main image image"
+    "main main extra extra"
+    "banner banner banner banner"
+    ;
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header{
+    align-items: center;
+    background-color: black;
+    grid-area: header;
+    padding: var(--my-padding);
+}
+
+.menu{
+    align-items: center;
+    background-color: orange;
+    display: grid;
+    grid-area: menu;
+    padding: var(--my-padding);
+}
+
+.hero{
+    align-items: center;
+    background-color: yellowgreen;
+    display: grid;
+    grid-area: hero;
+    padding: var(--my-padding);
+}
+
+.main{
+    align-items: center;
+    background-color:wheat;
+    display: grid;
+    grid-area: main;
+    padding: var(--my-padding);
+}
+
+.image{
+    align-items: center;
+    background-color: goldenrod;
+    display: grid;
+    grid-area: image;
+    padding: var(--my-padding);
+}
+
+.extra{
+    align-items: center;
+    background-color: rgb(78, 230, 109);
+    display: grid;
+    grid-area: extra;
+    padding: var(--my-padding);
+}
+
+.banner{
+    align-items: center;
+    background-color: rgb(168, 104, 2);
+    display: grid;
+    grid-area: banner;
+    padding: var(--my-padding);
+}
+
+@media(max-width: 1024){
+
+    .container{
+        grid-template-columns: 0.6fr 2fr 0.8fr;
+        grid-template-rows: 0.5fr 0.7fr 1fr 0.7fr 0.9fr;
+        grid-template-areas: 
+        "header header header"
+        "hero hero hero"
+        "menu main main"
+        "menu banner banner"
+        "menu extra image"
+        ;
+    }
+}
+
+@media(max-width: 480px){
+
+    .container{
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.5fr 0.8fr 2fr 0.6fr 0.8fr 0.9fr;
+        grid-template-areas: 
+        "header"
+        "menu"
+        "hero"
+        "main"
+        "banner"
+        "extra"
+        "image"
+        ;
+    }
+}
